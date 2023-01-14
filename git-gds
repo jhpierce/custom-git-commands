@@ -1,0 +1,4 @@
+# POC for custom git commands
+# shows a stat of the diff between your branch and master
+
+git diff master --shortstat

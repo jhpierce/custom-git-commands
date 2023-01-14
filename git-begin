@@ -1,0 +1,15 @@
+# Start work on a new ticket
+
+ticket=$1
+ticket_prefix="epdplt"
+
+branch_name=${ticket_prefix}-${ticket}
+
+# Check if branch name exists
+if [[ $(git branch | grep $branch_name) ]]
+then
+  echo $branch_name already exists
+  exit
+fi
+
+git checkout -b $branch_name

@@ -1,0 +1,2 @@
+# list branches by commit recency
+git for-each-ref --sort=-committerdate refs/heads/ --count=20 --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
